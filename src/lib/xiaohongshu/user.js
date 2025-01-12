@@ -51,6 +51,7 @@ let deal = async (ctx) => {
 				guid: noteCard.displayTitle,
 				description: `<img src ="${noteCard.cover.infoList.pop().url}"><br>${noteCard.displayTitle}`,
 				author: noteCard.user.nickname,
+				guid: noteCard.cover.infoList.pop().url.slice(-51), // 取链接的最后51个字符
 				upvotes: noteCard.interactInfo.likedCount,
 			}))
 		);
